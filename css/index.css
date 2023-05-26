@@ -1,0 +1,137 @@
+:root {
+    --background: 30, 38%, 92%;
+    --gray: 228, 12%, 48%;
+    --green: 158, 36%, 37%;
+    --primary-font: Fraunces;
+    --secondary-font: Montserrat;
+    --dark: 212, 21%, 14%;
+}
+
+body {
+    background-color: hsl(var(--background));
+    margin: 0;
+}
+
+main {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+
+.container {
+    background-color: white;
+    margin: 0 1rem;
+    border-radius: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        width: 50%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+#product-image picture img {
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+    #product-image picture img {
+        min-height: 100%;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+    }
+}
+
+#product-details {
+    padding: 0.4rem 1.5rem 1.5rem;
+}
+
+@media screen and (min-width: 1000px) {
+    #product-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2.4rem;
+    }
+}
+
+#product-details p.category {
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    color: hsl(var(--gray));
+    font-size: 0.8rem;
+}
+
+#product-details h1 {
+    color: var(--dark);
+    font-family: var(--primary-font);
+    margin: 0;
+}
+
+@media screen and (min-width: 1000px) {
+    #product-details h1 {
+        font-size: 2.4rem;
+    }
+}
+
+#product-details p {
+    font-family: var(--secondary-font);
+    font-size: 0.9rem;
+    color: hsl(var(--gray));
+    line-height: 1.6rem;
+}
+
+#product-details h2 {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    color: hsl(var(--green));
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pricing span {
+    color: hsl(var(--gray));
+    text-decoration: line-through;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+}
+
+button {
+    background-color: hsl(var(--green));
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    padding: 0.8rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 0.6rem;
+    color: white;
+}
+
+button:hover {
+    background-color: hsl(var(--dark));
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1000px) {
+    button {
+        padding: 1rem;
+    }
+}
